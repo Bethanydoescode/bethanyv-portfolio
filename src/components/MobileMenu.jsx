@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
   return (
@@ -58,6 +59,29 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
       >
         Contact
       </a>
+      <div className="flex gap-4">
+        {/* GitHub */}
+        <a
+          href="https://github.com/Bethanydoescode"
+          target="_blank"
+          rel="noreferrer"
+          className="text-gray-800 hover:text-pink-500 transition duration-200 text-2xl"
+          title="GitHub"
+        >
+          <FontAwesomeIcon icon={faGithub} />
+        </a>
+
+        {/* LinkedIn */}
+        <a
+          href="https://www.linkedin.com/in/bethanyvmills/"
+          target="_blank"
+          rel="noreferrer"
+          className="text-gray-800 hover:text-pink-500 transition duration-200 text-2xl"
+          title="LinkedIn"
+        >
+          <FontAwesomeIcon icon={faLinkedin} />
+        </a>
+      </div>
     </div>
   );
 };
