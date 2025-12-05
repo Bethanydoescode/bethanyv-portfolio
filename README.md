@@ -1,16 +1,83 @@
-# React + Vite
+# 🌐 Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my portfolio repository! This project showcases a collection of my work as a full-stack developer, highlighting my skills in frontend design, backend development, and systems integration.
 
-Currently, two official plugins are available:
+This portfolio is a central place to demonstrate my technical abilities, problem-solving mindset, and growth as a developer.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# ✨ Features
 
-## React Compiler
+Responsive and modern UI
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Interactive client-side animations
 
-## Expanding the ESLint configuration
+Contact form with EmailJS integration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Project showcases with descriptions and links
+
+Clean, modular codebase
+
+Built with scalability and maintainability in mind
+
+# 🛠️ Tech Stack
+
+## Frontend
+
+React
+
+Tailwind CSS
+
+JavaScript (ES6+)
+
+## Backend / Tools
+
+EmailJS
+
+Git & GitHub
+
+Vite
+
+⚠️ Note: Some projects include frontend-only backups of applications where backend services (.NET APIs or databases) are not currently connected.
+
+# 🚀 Getting Started
+Clone the repo
+git clone https://github.com/bethanydoescode/bethanyv-portfolio.git
+cd your-repo-name
+
+Install dependencies
+npm install
+
+Run locally
+npm run dev
+
+# 🔑 Environment Variables
+
+This project uses EmailJS for the contact form. Create a .env file in the project root and add:
+
+VITE_SERVICE_ID=your_service_id
+VITE_TEMPLATE_ID=your_template_id
+VITE_PUBLIC_KEY=your_public_key
+
+
+Restart the dev server after creating the file.
+
+# 📁 Project Structure
+src/
+├── components/
+├── pages/
+├── assets/
+├── styles/
+└── main.jsx
+
+# 📬 Contact
+
+Want to connect?
+
+You can reach me through the contact form on the site or via GitHub.
+
+# 📌 About This Repository
+
+This portfolio is an evolving project and will continue to grow as I improve my skills and add new features. Feedback and suggestions are always welcome!
+
+🖤 Thanks for Visiting
+
+If you like this project, consider giving it a star ⭐
