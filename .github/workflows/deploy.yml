@@ -34,8 +34,8 @@ jobs:
           VITE_EMAILJS_PUBLIC_KEY: ${{ secrets.VITE_EMAILJS_PUBLIC_KEY }}
         run: npm run build
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+      - name: Upload built site to artifact
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
 
