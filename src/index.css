@@ -24,7 +24,7 @@ body {
   }
 }
 
-// Reveal On Scroll
+/* Reveal On Scroll */
 @layer components {
   .reveal {
     opacity: 0;
