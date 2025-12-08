@@ -2,20 +2,27 @@ name: Deploy Vite React App to GitHub Pages
 
 on:
   push:
-    branches: ["main"] # deploy every time you push to main branch
+    branches: ["main"]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 20 # Vite recommended Node version
+          node-version: 20
 
       - name: Install dependencies
         run: npm install
@@ -27,8 +34,17 @@ jobs:
           VITE_EMAILJS_PUBLIC_KEY: ${{ secrets.VITE_EMAILJS_PUBLIC_KEY }}
         run: npm run build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist # Vite outputs build into /dist
+          path: ./dist
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: github-pages
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
